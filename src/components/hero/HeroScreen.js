@@ -27,7 +27,7 @@ export const HeroScreen = () => {
     // ?Esto nos devuelve a la pagina anterior
     navigate(-1);
   };
-  const imgPath = `/assets/heroes/${heroId}.jpg`;
+  const imgPath = `./assets/heroes/${heroId}.jpg`;
   return (
     <div className="row mt-5">
       <div className="col-4 animate__animated animate__fadeInLeft">
