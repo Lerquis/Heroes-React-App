@@ -1,0 +1,27 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Navbar } from "../ui/Navbar";
+import { MarvelScreen } from "../marvel/MarvelScreen";
+import { DcScreen } from "../dc/DcScreen";
+import { SearchScreen } from "../search/SearchScreen";
+import { HeroScreen } from "../hero/HeroScreen";
+import { LandingScreen } from "../landing/LandingScreen";
+
+export const DashboardRoutes = () => {
+  return (
+    <>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<LandingScreen />} />
+          <Route path="marvel" element={<MarvelScreen />} />
+          <Route path="dc" element={<DcScreen />} />
+          <Route path="search" element={<SearchScreen />} />
+          {/*Para decir que todo lo que siga es valido, se pone un
+            /: y lo que se quiere recibir */}
+          <Route path="hero/:heroId" element={<HeroScreen />} />
+        </Routes>
+      </div>
+    </>
+  );
+};
